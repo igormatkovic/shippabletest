@@ -1,6 +1,6 @@
 <?php
 echo "aaaa";
-print_r($_SERVER, true);
+var_dump($_SERVER);
 
 echo "bbb";
 
