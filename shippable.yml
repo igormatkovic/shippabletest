@@ -33,6 +33,7 @@ before_script:
 script:
   - phpunit -v --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage tests/ExampleTest.php
 after_script:
+  - cat testfile.txt
   - sudo service nginx stop
 notifications:
   email: false
