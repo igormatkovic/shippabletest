@@ -31,7 +31,7 @@ before_script:
   - sudo service nginx restart
   - composer install -n --prefer-source
 script:
-  - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage tests/ExampleTest.php
+  - phpunit -v --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage tests/ExampleTest.php
 after_script:
   - sudo service nginx stop
 notifications:
