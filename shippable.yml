@@ -9,7 +9,7 @@ services:
 addons:
   hosts:
     - host1.local
-
+cache: true
 before_script:
   - sudo apt-get update
   - sudo apt-get install nginx
