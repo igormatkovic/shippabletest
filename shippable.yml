@@ -12,6 +12,9 @@ addons:
 cache: true
 before_script:
   - sudo apt-get update
+  - sudo apt-get install php5-fpm
+  - echo "cgi.fix_pathinfo=0" >> /etc/php5/fpm/php.ini
+  - echo "listen = /var/run/php5-fpm.sock" >> /etc/php5/fpm/pool.d/www.conf
   - sudo apt-get install nginx
   - sudo cp ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf.default ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf
   - ~/.phpenv/versions/$(phpenv version-name)/sbin/php-fpm
