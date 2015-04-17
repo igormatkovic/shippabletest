@@ -27,6 +27,7 @@ before_script:
   - cat /etc/hosts
   - cat ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf
   - ls -l /etc/nginx/sites-enabled/
+  - sudo nginx -t
   - sudo service nginx restart
   - composer install -n --prefer-source
 script:
