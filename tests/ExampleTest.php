@@ -18,7 +18,6 @@ class ExampleTest extends PHPUnit_Framework_TestCase {
         $exmp = new Example();
         fwrite(STDERR,  $exmp->ola());
         $this->assertEquals('burel',  $exmp->ola(), $exmp->ola());
-
     }
 }
 ?>

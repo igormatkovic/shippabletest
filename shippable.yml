@@ -10,6 +10,8 @@ addons:
   hosts:
     - laundrapp.dev
     - order.laundrapp.dev
+env:
+ - TESTING_USERNAME=shippable BROWSERSTACK_LOCAL=true TESTING_DATABASE=test BASE_URL=http://laundrapp.dev ORDER_URL=http://order.laundrapp.dev SAUCE_USERNAME=igormatkovic SAUCE_ACCESS_KEY=94f20e6e-1d98-42b0-902f-75832eb49450
 cache: true
 before_script:
   - sudo apt-get update
