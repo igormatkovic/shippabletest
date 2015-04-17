@@ -8,7 +8,8 @@ services:
 
 addons:
   hosts:
-    - host1.local
+    - laundrapp.dev
+    - order.laundrapp.dev
 cache: true
 before_script:
   - sudo apt-get update
@@ -25,8 +26,6 @@ before_script:
   - cat /etc/nginx/sites-available/default
   - sudo rm -rf /etc/nginx/sites-enabled/default
   - sudo rm -rf /etc/nginx/sites-available/default
-  - cat /etc/hosts
-  - cat ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf
   - ls -l /etc/nginx/sites-enabled/
   - sudo nginx -t
   - sudo service nginx restart

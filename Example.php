@@ -1,11 +1,11 @@
 <?php
 class Example {
-  public function test() {
-  	$text = file_get_contents("http://host1.local");
+  public function la() {
+  	$text = file_get_contents("http://laundrapp.dev");
     return $text;
   }
-  public function test2() {
-  	$text = file_get_contents("http://localhost");
+  public function ola() {
+  	$text = file_get_contents("http://order.laundrapp.dev");
     return $text;
   }
 }
