@@ -22,8 +22,6 @@ before_script:
   - sudo sed -e "s?%BUILD_DIR%?$(pwd)?g" --in-place /etc/nginx/sites-available/site-nginx.conf
   - sudo rm -rf /etc/nginx/sites-enabled/site-nginx.conf
   - sudo ln -s "/etc/nginx/sites-available/site-nginx.conf" "/etc/nginx/sites-enabled/site-nginx.conf"
-  - cat /etc/nginx/sites-enabled/site-nginx.conf
-  - cat /etc/nginx/sites-available/default
   - sudo rm -rf /etc/nginx/sites-enabled/default
   - sudo rm -rf /etc/nginx/sites-available/default
   - ls -l /etc/nginx/sites-enabled/
