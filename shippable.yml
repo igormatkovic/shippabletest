@@ -15,8 +15,10 @@ before_script:
   - sudo apt-get install nginx
   - sudo cp ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf.default ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf
   - ~/.phpenv/versions/$(phpenv version-name)/sbin/php-fpm
+
   - sudo cp -f config/site-nginx.conf /etc/nginx/sites-available/site-nginx.conf
   - sudo sed -e "s?%BUILD_DIR%?$(pwd)?g" --in-place /etc/nginx/sites-available/site-nginx.conf
+  - rm -rf /etc/nginx/sites-enabled/site-nginx.conf
   - sudo ln -s "/etc/nginx/sites-available/site-nginx.conf" "/etc/nginx/sites-enabled/site-nginx.conf"
   - cat /etc/nginx/sites-enabled/site-nginx.conf
   - cat /etc/nginx/sites-available/default
