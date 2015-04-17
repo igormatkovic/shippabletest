@@ -17,6 +17,9 @@ before_script:
   - ~/.phpenv/versions/$(phpenv version-name)/sbin/php-fpm
   - sudo cp -f config/site-nginx.conf /etc/nginx/sites-enabled/site-nginx.conf
   - sudo sed -e "s?%BUILD_DIR%?$(pwd)?g" --in-place /etc/nginx/sites-enabled/site-nginx.conf
+  - cat /etc/nginx/sites-enabled/site-nginx.conf
+  - cat /etc/hosts
+  - cat ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf
   - sudo service nginx start
   - composer install -n --prefer-source
 script:
