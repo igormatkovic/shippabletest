@@ -22,6 +22,7 @@ before_script:
   - sudo ln -s "/etc/nginx/sites-available/site-nginx.conf" "/etc/nginx/sites-enabled/site-nginx.conf"
   - cat /etc/nginx/sites-enabled/site-nginx.conf
   - cat /etc/nginx/sites-available/default
+  - sudo rm -rf /etc/nginx/sites-enabled/default
   - sudo rm -rf /etc/nginx/sites-available/default
   - cat /etc/hosts
   - cat ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf
