@@ -5,6 +5,7 @@ php:
 
 services:
   - mysql
+  - phantomjs
 
 addons:
   hosts:
@@ -34,5 +35,6 @@ script:
 after_script:
   - cat testfile.txt
   - sudo service nginx stop
+  - cat /etc/nginx/sites-enabled/site-nginx.conf
 notifications:
   email: false
